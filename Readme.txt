@@ -1,44 +1,42 @@
-Niyam Sah-AI
-(An Indian Lawyer AI Assistant - law-i with AI )
+# Niyam Sah-AI: The Indian Lawyer AI Assistant (Law-i with AI)
 
-Niyam Sah-AI is a opensource RAG based Legal assistance based on Indian Laws. The goal here is to serve as a legal assistance to the public and make legal access more easier. This project idea was initiated and implemented with constant guidance and support from mentors at Data Science Academy(link) and professionals at Curvelogics(link).
+**Niyam Sah-AI** is an open-source legal assistant based on **Retriever-Augmented Generation (RAG)** and Indian laws. This project aims to make legal assistance more accessible to the public by providing AI-driven legal guidance on Indian law.
 
-Laws Covered Currently
+This project is initiated and implemented with guidance and support from mentors at [Data Science Academy](link) and professionals at [Curvelogics](link).
 
-1 Indian Constitution
-2 The Bharatiya Nyaya Sanhita, 2023
-3 Bharatiya Nagarik Suraksha Sanhita, 2023
-4 The Bharatiya Sakshya Adhiniyam, 2023
+## Laws Currently Covered
 
-How to use ?
+1. **The Indian Constitution**
+2. **The Bharatiya Nyaya Sanhita, 2023**
+3. **The Bharatiya Nagarik Suraksha Sanhita, 2023**
+4. **The Bharatiya Sakshya Adhiniyam, 2023**
 
-git clone
+## How to Use
 
-cd niyam sahayak
+To get started with **Niyam Sah-AI**, follow these steps:
 
+```bash
+git clone https://github.com/yourusername/niyam-sahayak.git
+cd niyam-sahayak
 pip install -r requirements.txt
-
 streamlit run main.py
+## Tools & Technologies Used
 
+- **LangChain**
+- **ChromaDB**
+- **Streamlit**
+- **OpenAI API**
 
-Tools Used 
+## Planned Future Developments
 
-	1 LangChain
-	2 Chroma
-	3 Streamlit
-	4 OpenAI
+1. **Broader Data Sources**  
+   - Supreme Court Judgments  
+   - Women-Centric Laws  
+   - Consumer Protection Laws  
+   - Pollution Laws  
 
-Planned Future Developments
-
-	1 Broader Data source
-		Supreme Court Judgements
-		Women Centric Laws
-		Consumer Protection Laws
-		Pollution Laws
-
-	2 Voice Integration
-	3 Multi Lingual Support
-	
+2. **Voice Integration**  
+3. **Multi-Lingual Support**
 
 
 
