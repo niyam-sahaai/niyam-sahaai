@@ -1,6 +1,6 @@
 from langchain_chroma import Chroma
 from langchain_openai import OpenAIEmbeddings
-
+from dotenv import load_dotenv
 from langchain_openai import OpenAI
 from langchain.schema import SystemMessage, HumanMessage
 import os
@@ -8,9 +8,9 @@ import streamlit as st
 
 
 st.title("Indian Law Assistant - AI")
-
-os.environ["OPENAI_API_KEY"] ="" # please type your OPENAI API KEY
-llm = OpenAI(temperature=0)
+load_dotenv()
+openai_api_key =os.getenv('OPENAI_API_KEY') # please type your OPENAI API KEY
+llm = OpenAI(temperature=0, openai_api_key = openai_api_key)
 embeddings = OpenAIEmbeddings()
 db1 = Chroma(persist_directory="chroma_db_legal_bot_part1", embedding_function=embeddings)
 retriever = db1.as_retriever(search_type="similarity", search_kwargs={"k" : 2})
@@ -37,7 +37,6 @@ if prompt := st.chat_input("What is up?"):
     query = prompt
     get_documents = retriever.invoke(query)
     metadata = [doc.metadata for doc in get_documents]
-    print(metadata)
     combined_input = (
         "You are an lawyer assistant and you are provided with some documents with legal contents that might contain relevant sections or articles which can help you answer the question  and revalidate the sections carefully: "
         +query
