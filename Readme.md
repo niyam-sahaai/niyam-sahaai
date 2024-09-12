@@ -14,7 +14,7 @@ This project is initiated and implemented with guidance and support from mentors
 
 ## How to Use
 
-To get started with **Niyam Sah-AI**, follow these steps:
+To get started with **Niyam SahaAI**, follow these steps:
 1. Fork the project in the Command Line Interface
 ```bash
 git clone <folked Link>
