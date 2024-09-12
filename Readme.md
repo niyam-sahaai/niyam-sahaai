@@ -3,7 +3,7 @@
 
 **Niyam Sah-AI** is an open-source legal assistant based on **Retriever-Augmented Generation (RAG)** and Indian laws. This project aims to make legal assistance more accessible to the public by providing AI-driven legal guidance on Indian law.
 
-This project is initiated and implemented with guidance and support from mentors at [Data Science Academy]([link](https://datascience.one/)) and professionals at [Curvelogics]([link](https://www.curvelogics.com/)).
+This project is initiated and implemented with guidance and support from mentors at [Data Science Academy]([https://datascience.one/]) and professionals at [Curvelogics]([https://www.curvelogics.com/]).
 
 ## Laws Currently Covered
 
