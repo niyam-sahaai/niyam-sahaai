@@ -15,11 +15,20 @@ This project is initiated and implemented with guidance and support from mentors
 ## How to Use
 
 To get started with **Niyam Sah-AI**, follow these steps:
-
+1. Fork the project in the Command Line Interface
 ```bash
-git clone https://github.com/yourusername/niyam-sahayak.git
+git clone <folked Link>
+```
+2. Change the directory to the respected folder
+```bash
 cd niyam-sahayak
+```
+3. Use the following command to install necessary packages
+```bash
 pip install -r requirements.txt
+```
+4. Run the following command to use the app
+```bash
 streamlit run main.py
 ```
 ## Tools & Technologies Used
