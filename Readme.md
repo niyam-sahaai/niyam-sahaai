@@ -17,7 +17,7 @@ This project is initiated and implemented with guidance and support from mentors
 To get started with **Niyam SahaAI**, follow these steps:
 1. Fork the project in the Command Line Interface
 ```bash
-git clone <folked Link>
+git clone <forked Link>
 ```
 2. Change the directory to the respected folder
 ```bash
