@@ -21,6 +21,7 @@ git clone https://github.com/yourusername/niyam-sahayak.git
 cd niyam-sahayak
 pip install -r requirements.txt
 streamlit run main.py
+```
 ## Tools & Technologies Used
 
 - **LangChain**
