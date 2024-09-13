@@ -12,8 +12,8 @@ st.title("Indian Law Assistant - AI")
 os.environ["OPENAI_API_KEY"] ="" # please type your OPENAI API KEY
 llm = OpenAI(temperature=0)
 embeddings = OpenAIEmbeddings()
-db1 = Chroma(persist_directory="chroma_db_legal_bot_part1", embedding_function=embeddings)
-retriever = db1.as_retriever(search_type="similarity", search_kwargs={"k" : 2})
+vector_store = Chroma(persist_directory="chroma_db_legal_bot_part1", embedding_function=embeddings)
+retriever = vector_store.as_retriever(search_type="similarity", search_kwargs={"k" : 2})
 
 
 # Initialize chat history
