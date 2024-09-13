@@ -7,7 +7,7 @@ import os
 import streamlit as st
 
 
-st.title("Indian Law Assistant - AI")
+st.title("Niyam Saha-AI")
 
 os.environ["OPENAI_API_KEY"] ="" # please type your OPENAI API KEY
 llm = OpenAI(temperature=0)
