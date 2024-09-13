@@ -17,7 +17,7 @@ This project is initiated and implemented with guidance and support from mentors
 To get started with **Niyam SahaAI**, follow these steps:
 1. Open the Command Line Interface and run the following commmand
 ```bash
-git clone (https://github.com/niyam-sahaai/niyam-sahaai.git)
+git clone https://github.com/niyam-sahaai/niyam-sahaai.git
 ```
 2. Change the directory to the respected folder
 ```bash
