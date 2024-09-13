@@ -37,7 +37,7 @@ if prompt := st.chat_input("What is up?"):
     query = prompt
     get_documents = retriever.invoke(query)
     metadata = [doc.metadata for doc in get_documents]
-    print(metadata)
+    
     combined_input = (
         "You are an lawyer assistant and you are provided with some documents with legal contents that might contain relevant sections or articles which can help you answer the question  and revalidate the sections carefully: "
         +query
