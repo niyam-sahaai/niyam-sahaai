@@ -21,7 +21,7 @@ git clone https://github.com/niyam-sahaai/niyam-sahaai.git
 ```
 2. Change the directory to the respected folder
 ```bash
-cd niyam-sahayak
+cd niyam-sahaai
 ```
 3. Use the following command to install necessary packages
 ```bash
