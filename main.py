@@ -5,11 +5,14 @@ from langchain_openai import OpenAI
 from langchain.schema import SystemMessage, HumanMessage
 import os
 import streamlit as st
+import random
+import time
 
 
 st.title("Niyam Saha-AI")
 load_dotenv()
-openai_api_key =os.getenv('OPENAI_API_KEY')
+
+openai_api_key =os.getenv('OPENAI_API_KEY') # please type your OPENAI API KEY
 llm = OpenAI(temperature=0, openai_api_key = openai_api_key)
 embeddings = OpenAIEmbeddings()
 vector_store = Chroma(persist_directory="chroma_db_legal_bot_part1", embedding_function=embeddings)
@@ -57,9 +60,21 @@ if prompt := st.chat_input("Have a legal question? Let’s work through it."):
 
     result = llm.invoke(messages)
 
-    response = f"AI Law Assistant: {result}"
+    
+    def response_generator(result):  # To generate text as a list of pre-determind responses. 
+        response = random.choice([result])
+        for word in response.split():
+            yield word + " "
+            time.sleep(0.05)
+    final_response = f"AI Law Assistant: {result}"
+
     # Display assistant response in chat message container
     with st.chat_message("assistant"):
-        st.markdown(response)
+        response = st.write_stream(response_generator(final_response))
+
     # Add assistant response to chat history
     st.session_state.messages.append({"role": "assistant", "content": response})
+
+
+        
+ 
