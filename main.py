@@ -13,7 +13,7 @@ st.title("Niyam Saha-AI")
 load_dotenv()
 
 openai_api_key =os.getenv('OPENAI_API_KEY') # please type your OPENAI API KEY
-llm = OpenAI(temperature=0, openai_api_key = openai_api_key)
+llm = OpenAI(temperature=0, openai_api_key = openai_api_key, max_tokens=1200)
 embeddings = OpenAIEmbeddings()
 vector_store = Chroma(persist_directory="chroma_db_legal_bot_part1", embedding_function=embeddings)
 retriever = vector_store.as_retriever(search_type="similarity", search_kwargs={"k" : 2})
