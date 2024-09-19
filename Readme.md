@@ -27,7 +27,12 @@ cd niyam-sahaai
 ```bash
 pip install -r requirements.txt
 ```
-4. Run the following command to use the app
+4. Open the `.env` file in normal text editing software and paste OPENAI API KEY
+```bash
+OPENAI API KEY = ------
+``` 
+
+6. Run the following command to use the app
 ```bash
 streamlit run main.py
 ```
