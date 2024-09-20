@@ -32,7 +32,7 @@ pip install -r requirements.txt
 OPENAI API KEY = ------
 ``` 
 
-6. Run the following command to use the app
+5. Run the following command to use the app
 ```bash
 streamlit run main.py
 ```
