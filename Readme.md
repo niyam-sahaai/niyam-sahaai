@@ -12,6 +12,9 @@ This project is initiated and implemented with guidance and support from mentors
 3. **The Bharatiya Nagarik Suraksha Sanhita, 2023**
 4. **The Bharatiya Sakshya Adhiniyam, 2023**
 
+## Video Tutorial
+[![Niyam Saha-AI Tutorial](https://img.youtube.com/vi/sWpLEApQtvE/0.jpg)](https://www.youtube.com/watch?v=sWpLEApQtvE "Niyam Saha-AI Tutorial")
+
 ## How to Use
 
 To get started with **Niyam SahaAI**, follow these steps:
