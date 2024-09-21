@@ -48,14 +48,16 @@ streamlit run main.py
 
 ## Planned Future Developments
 
-1. **Broader Data Sources**  
+1. **Develop Niyam Saha-AI into a fully functional service with a user-friendly frontend**
+2. **Expand Niyam Saha-AI to support legal systems in more countries like Canada**
+3. **Broader Data Sources**  
    - Supreme Court Judgments  
    - Women-Centric Laws  
    - Consumer Protection Laws  
    - Pollution Laws  
 
-2. **Voice Integration**  
-3. **Multi-Lingual Support**
+4. **Voice Integration**  
+5. **Multi-Lingual Support**
 
 
 
