@@ -23,10 +23,17 @@ embeddings = OpenAIEmbeddings()
 vector_store = Chroma(persist_directory="chroma_db_legal_bot_part1", embedding_function=embeddings)
 retriever = vector_store.as_retriever(search_type="similarity")
 
+# Initialize session state for chat memory
+if "chat_memory" not in st.session_state:
+    st.session_state.chat_memory = []  # Initialize chat memory in session state
+
 contextualize_q_system_prompt = """Given a chat history and the latest user question \
 which might reference context in the chat history, formulate a standalone question \
 which can be understood without the chat history. Do NOT answer the question, \
-just reformulate it if needed and otherwise return it as is."""
+just reformulate it if needed and otherwise return it as is.\
+If general greeting words or incomplete questions which are totally not related \
+to chat history then handle this in such a way that model doesn't formulate a wrong standalone question
+"""
 
 
 contextualize_q_prompt = ChatPromptTemplate.from_messages(
@@ -77,14 +84,14 @@ conversational_rag_chain = RunnableWithMessageHistory(
     history_messages_key="chat_memory",
     output_messages_key="answer", )
 
-chat_memory = []
+
+
 
 
 def chat(question):
-    question = question
-    ai = rag_chain.invoke({"input": question, "chat_memory": chat_memory})
-    chat_memory.extend([HumanMessage(content=question), ai["answer"]])
-    return ai["answer"]
+    ai = rag_chain.invoke({"input": question, "chat_memory": st.session_state.chat_memory})
+    st.session_state.chat_memory.extend([HumanMessage(content=question), ai["answer"]])
+    return ai
 
 
 # Initialize chat history
@@ -106,7 +113,8 @@ if prompt := st.chat_input("Have a legal question? Let’s work through it."):
 
     query = prompt
 
-    result_text = chat(query)
+    result_text = chat(query)["answer"]
+
     # Extract the text after "System:" from the AI's response
     if "System:" in result_text:
         # Extract the text after "System:" and strip leading/trailing spaces
