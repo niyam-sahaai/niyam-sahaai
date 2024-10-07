@@ -37,7 +37,7 @@ OPENAI API KEY = ------
 
 5. Run the following command to use the app
 ```bash
-streamlit run main.py
+streamlit run app.py
 ```
 ## Tools & Technologies Used
 
