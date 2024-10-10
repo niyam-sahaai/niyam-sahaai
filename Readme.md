@@ -1,5 +1,5 @@
 # Niyam SahaAI: The Indian Lawyer AI Assistant
-## Niyam SahaAI is now LawGlance   -[Github](https://github.com/lawglance/lawglance)  [Website](https://lawglance.com/)
+## Niyam SahaAI is now LawGlance   -[Github](https://github.com/lawglance/lawglance) || [Website](https://lawglance.com/)
 
 **Niyam SahaAI** is an open-source legal assistant based on **Retriever-Augmented Generation (RAG)** and Indian laws. This project aims to make legal assistance more accessible to the public by providing AI-driven legal guidance on Indian law.
 
